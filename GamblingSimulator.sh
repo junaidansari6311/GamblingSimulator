@@ -1,5 +1,5 @@
-#!/bin/bash 
-echo "WELCOME TO GAMBLING SIMULATOR" 
+#!/bin/bash
+echo "WELCOME TO GAMBLING SIMULATOR"
 #dictionary
 declare -A wonOrLostPerDay
 #constants
@@ -41,6 +41,7 @@ do
 	fi
 	wonOrLostPerDay[$i]=$presentAmount
 done
+#Displaying winning or loosing amount in 20 days 
 if [ $winningAmount -gt $loosingAmount ]
 then
 	echo "You won by $(($winningAmount - $loosingAmount)) in 20 days" 
@@ -70,4 +71,3 @@ echo "Luckiest day"
 checkLuckiestAndUnlucliestDay -rn
 echo "Unluckiest day"
 checkLuckiestAndUnlucliestDay -n
-
